@@ -37,3 +37,21 @@
 - 모든 엔티티를 작게 유지한다.
 - 3개 이상의 인스턴스 변수를 가진 클래스를 쓰지 않는다.
 - 딜러와 플레이어에서 발생하는 중복 코드를 제거해야 한다.
+
+---
+
+### 기능 요구 사항 
+- Hit 
+- Stay 
+- BlackJack 
+- Bust 
+
+### 기능 목록
+- Ready -> 카드 2장 -> Hit
+- Ready -> 카드 2장 -> BlackJack 
+- Hit -> 카드 1장 -> Hit 
+- Hit -> 카드 1장 -> Bust 
+- Hit -> Stay 
+- Bust -> x 
+- Stay -> x 
+- BlackJack -> x 
