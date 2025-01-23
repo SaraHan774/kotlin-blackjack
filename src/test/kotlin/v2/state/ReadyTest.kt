@@ -3,8 +3,6 @@ package v2.state
 import io.kotest.matchers.collections.shouldContain
 import io.kotest.matchers.collections.shouldContainAnyOf
 import io.kotest.matchers.types.shouldBeInstanceOf
-import io.kotest.matchers.types.shouldNotBeInstanceOf
-import net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.ForField.Read
 import org.junit.jupiter.api.Test
 import v2.card.Denomination
 import v2.card.PlayingCard
@@ -32,6 +30,7 @@ class ReadyTest {
         actual.cards.shouldContainAnyOf(CLUBS_TWO, CLUBS_TEN) // listOf 가 들어있다고 shouldContaint 쓰면 안됨
     }
 
+    @Test
     fun blackJack() {
         val state = Ready(CLUBS_ACE)
         val actual = state.draw(CLUBS_TEN)
@@ -41,5 +40,7 @@ class ReadyTest {
 }
 
 val CLUBS_TWO = PlayingCard.of(SuitV2.CLUBS, Denomination.TWO)
+val CLUBS_THREE = PlayingCard.of(SuitV2.CLUBS, Denomination.THREE)
 val CLUBS_TEN = PlayingCard.of(SuitV2.CLUBS, Denomination.TEN)
 val CLUBS_ACE = PlayingCard.of(SuitV2.CLUBS, Denomination.ACE)
+val CLUBS_KING = PlayingCard.of(SuitV2.CLUBS, Denomination.KING)

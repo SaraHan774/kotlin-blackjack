@@ -1,8 +1,5 @@
 package v2.card
 
-import java.util.*
-import kotlin.NoSuchElementException
-
 class PlayingCard private constructor(private val suit: SuitV2, private val denomination: Denomination) {
     val isAce: Boolean = denomination.isAce
     val score: Int = denomination.score

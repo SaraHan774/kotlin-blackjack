@@ -1,6 +1,5 @@
 package v2.state
 
-import v2.card.PlayingCard
+import v2.Hands
 
-class BlackJack(override val cards: List<PlayingCard>) : State {
-}
+class BlackJack(hands: Hands) : Finished(hands)
